@@ -1,0 +1,548 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="Home Page">
+		<meta name="author" content="Ali Raza">
+		<title>Website Project</title>
+
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+		<!-- custom css file link -->
+		<link rel = "stylesheet" href = "css/style.css">
+
+
+		<style type="text/css">
+			.navbar-nav .nav-item {
+				margin-right:30px;
+			}
+			/* ============ desktop view ============ */
+			@media all and (min-width: 992px) {
+
+				.dropdown-menu li{
+					position: relative;
+				}
+				.dropdown-menu .submenu{ 
+					display: none;
+					position: absolute;
+					left:100%; top:-7px;
+				}
+				.dropdown-menu .submenu-left{ 
+					right:100%; left:auto;
+				}
+				.dropdown-menu > li:hover{ background-color: #f1f1f1 }
+				.dropdown-menu > li:hover > .submenu{
+					display: block;
+				}
+				#logout{
+					margin-top: 50px;
+				}
+			}	
+			/* ============ desktop view .end// ============ */
+
+			/* ============ small devices ============ */
+			@media (max-width: 991px) {
+
+				.dropdown-menu li{
+					position: relative;
+				}
+				.dropdown-menu .submenu{ 
+					display: none;
+					position: relative;
+					top:-7px;
+				}
+				.dropdown-menu .submenu-left{ 
+					right:100%; left:auto;
+				}
+
+				.dropdown-menu > li:hover{ background-color: #f1f1f1 }
+				.dropdown-menu > li:hover > .submenu{
+					display: block;
+				}
+				#logout{
+					margin-top: -20px;
+					margin-bottom: 20px;
+				}
+			}	
+			/* ============ small devices .end// ============ */
+
+		</style>
+		<script>
+
+			var username=localStorage.getItem('name');	
+			var userpass=localStorage.getItem('pass');
+			if(username == '' && userpass ==''){
+				window.location.href = "signup.html";
+			}
+		</script>
+
+
+	</head>
+	<body>
+		<!-- ============= Content ============== -->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-4">
+					<a class="navbar-brand" href="#">
+						<img src="logo.png" height="100" width="100" />
+						<h3>Book Store</h3>
+					</a>
+				</div>
+				<div class="col-md-4">
+				</div>
+				<div class="col-md-2">
+
+				</div>
+				<div class="col-md-2" id="logout">
+					<a class="btn btn-outline-success " style="font-size: 70%;" href="login.html" type="submit">Logout</a>
+				</div>
+
+
+			</div>	
+		</div>
+		<br>
+		<div class="container-fluid" style="margin-top: -30px;">
+
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<div class="container">
+					<a class="navbar-brand" href="#">
+
+					</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="main_nav">
+						<ul class="navbar-nav">
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="about.html" data-bs-toggle="dropdown">  About  </a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="description.html"> Description </a></li>
+									<li><a class="dropdown-item" href="contactus.html"> Contact Us &raquo; </a>
+										<ul class="submenu dropdown-menu">
+											<li><a class="dropdown-item" href="support.html">Support</a></li>
+											<li><a class="dropdown-item" href="jobs.html">Jobs</a></li>
+										
+									</li>
+									
+								</ul>
+							</li>
+						</ul>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="account.html" data-bs-toggle="dropdown">  Account  </a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="login.html"> Login &raquo; </a>
+									<ul class="submenu dropdown-menu">
+										<li><a class="dropdown-item" href="accountsetting.html">Account Setting</a>
+											<ul class="submenu dropdown-menu">
+												<li><a class="dropdown-item" href="paymentmethod.html">Payment Methods</a></li>
+												<li><a class="dropdown-item" href="shippinginformation.html">Shipping Information</a></li>
+												<li><a class="dropdown-item" href="order.html">Orders</a></li>
+												<li><a class="dropdown-item" href="trackanorder.html">Track an Order</a></li>
+												<li><a class="dropdown-item" href="orderhistory.html">Order History</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li><a class="dropdown-item" href="signup.html"> Sign Up </a></li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="shop.html" data-bs-toggle="dropdown">  Shop  </a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="cart.html"> Cart </a></li>
+								<li><a class="dropdown-item" href="recommandedforyou.html"> Recommended for you </a></li>
+								<li><a class="dropdown-item" href="bestsellers.html"> Best Sellers </a></li>
+								<li><a class="dropdown-item" href="newreleases.html"> New Releases </a></li>
+								<li><a class="dropdown-item" href="search.html"> Search &raquo; </a>
+									<ul class="submenu dropdown-menu">
+										<li><a class="dropdown-item" href="genres.html">Genres</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						</ul>
+				</div> 
+				</div>
+			</nav>
+
+
+		</div>
+	<br><br><br><br>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4">
+
+			</div>
+			<div class="col-md-4">
+				<h3 style="text-align: center;">
+					Welcome to our book store
+				</h3>
+			</div>
+			<div class="col-md-4">
+
+			</div>
+		</div>
+	</div>
+	
+	<!-- Isabelle Wang Part -->
+	<div id = "content1">
+		<section class = "featured" id = "featured">
+			<h1 class = "heading"> <span>Featured Books</span> </h1>
+
+			<div class = "swiper featured-slider">
+
+				<div class = "swiper-wrapper">
+
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book1.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>ANYA</h3>
+							<div class = "price">$8.99 <span>$17.99</span> </div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book2.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>Love Elliot</h3>
+							<div class = "price">$14.99 <span>$20.99</span> </div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book3.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>BEYOND</h3>
+							<div class = "price">$20.99 <span>$29.99</span> </div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book4.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>Wilder Girls</h3>
+							<div class = "price">$9.99 <span>$18.99</span> </div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book5.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>Prince Thorns</h3>
+							<div class = "price">$24.99 <span>$29.99</span> </div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book6.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>Green Soldier</h3>
+							<div class = "price">$9.99 <span>$15.99</span> </div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book7.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>Dorian Gray</h3>
+							<div class = "price">$9.99 <span>$17.99</span> </div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book8.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>Arts Style</h3>
+							<div class = "price">$15.99 <span>$24.99</span> </div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book9.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>Magic Forest</h3>
+							<div class = "price">$12.99 <span>$18.99</span> </div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book10.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>The Swallows</h3>
+							<div class = "price">$17.99 <span>$25.99</span> </div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+				</div>
+
+				<div class = "swiper-button-next"></div>
+				<div class = "swiper-button-prev"></div>
+
+			</div>
+
+		</section>
+
+		<section class = "featured" id = "featured">
+			<h1 class = "heading"> <span>Genres: Fantasy</span> </h1>
+
+			<div class = "swiper featured-slider">
+
+				<div class = "swiper-wrapper">
+
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book11.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>American Gods</h3>
+							<div class = "price">$18.99</div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book12.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>Lord Rings</h3>
+							<div class = "price">$24.99</div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book13.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>Jade City</h3>
+							<div class = "price">$15.99</div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book14.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>Life Of Pi</h3>
+							<div class = "price">$19.99</div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book15.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>Mockingbird</h3>
+							<div class = "price">$20.99</div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book16.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>IKIGAI</h3>
+							<div class = "price">$19.99</div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book17.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>Gunslinger</h3>
+							<div class = "price">$22.99</div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book18.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>House Always</h3>
+							<div class = "price">$15.99</div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book19.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>Harry Potter</h3>
+							<div class = "price">$12.99</div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book20.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>Game Thrones</h3>
+							<div class = "price">$17.99</div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+				</div>
+
+				<div class = "swiper-button-next"></div>
+				<div class = "swiper-button-prev"></div>
+
+			</div>
+
+		</section>
+
+		<section class = "featured" id = "featured">
+			<h1 class = "heading"> <span>Author: Shakespeare</span> </h1>
+
+			<div class = "swiper featured-slider">
+
+				<div class = "swiper-wrapper">
+
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book21.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>Merchant Venice</h3>
+							<div class = "price">$20.99</div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book22.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>King Lear</h3>
+							<div class = "price">$15.99</div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book23.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>Macbeth</h3>
+							<div class = "price">$18.99</div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book24.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>Midsummer Dream</h3>
+							<div class = "price">$21.99</div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book25.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>Romeo Juliet</h3>
+							<div class = "price">$13.99</div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book26.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>Hamlet</h3>
+							<div class = "price">$20.99</div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book27.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>Tempest</h3>
+							<div class = "price">$19.99</div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book28.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>Nothing</h3>
+							<div class = "price">$25.99</div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book29.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>Twelfth Night</h3>
+							<div class = "price">$22.99</div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+					<div class = "swiper-slide box">
+						<div class = "image">
+							<img src = "image/book30.png" alt = "">
+						</div>	
+						<div class = "content">
+							<h3>Othello</h3>
+							<div class = "price">$27.99</div>
+							<a href = "#" class = "btn"> Add To Cart </a>
+						</div>
+					</div>
+				</div>
+
+				<div class = "swiper-button-next"></div>
+				<div class = "swiper-button-prev"></div>
+
+			</div>
+
+		</section>
+	</div>
+	<script src = "https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+	<!-- custom js file link -->
+	<script src = "js/script.js"></script>
+
+	<!-- ============= Content END ============== -->
+	</body>
+</html>
